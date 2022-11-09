@@ -4,5 +4,10 @@
     font-size: 2vh;
     color: cornsilk;
     text-align: center;
+    padding: 10px;
     
 }
+ .text{
+    background-color: burlywood;
+    padding 0px, 0px, 10px, 0px;
+ }
