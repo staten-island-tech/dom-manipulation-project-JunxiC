@@ -2,7 +2,7 @@ const DOMSelectors = {
   button: document.getElementById("btn"),
   box: document.getElementById("container-box"),
   input: document.querySelector(`#input`),
-  remove: document.getElementById("remove"),
+  remove: document.getElementById("#remove"),
 };
 
 DOMSelectors.button.addEventListener("click", function () {
@@ -17,12 +17,21 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.input.value = "";
 });
 
+function change() {
+  let pointIndex = 1;
+  DOMSelectors.points.forEach((point) => {
+    point.addEventListener("click", function () {
+      point.textContent = `Hello I am point ${pointIndex}`;
+    });
+  });
+}
+
 function blue(background, text) {
   background.style.backgroundColor = "blue";
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  blue(DOMSelectors.button, DOMSelectors.text);
+  blue(DOMSelectors.remove, DOMSelectors.text);
 });
 
 function red(background, text) {
@@ -32,3 +41,5 @@ function red(background, text) {
 DOMSelectors.button.addEventListener("click", function () {
   red(DOMSelectors.box, DOMSelectors.text);
 });
+
+console.log();
