@@ -26,29 +26,18 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.address.value = "";
 });
 
-function change() {
-  let pointIndex = 1;
-  DOMSelectors.points.forEach((point) => {
-    point.addEventListener("click", function () {
-      point.textContent = `Hello I am point ${pointIndex}`;
-    });
-  });
-}
-
-function blue(background, text) {
-  background.style.backgroundColor = "blue";
-}
-
-DOMSelectors.button.addEventListener("click", function () {
-  blue(DOMSelectors.button, DOMSelectors.text);
-});
-
-function red(background, text) {
+function red(background) {
   background.style.backgroundColor = "red";
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  red(DOMSelectors.box, DOMSelectors.text);
+  red(DOMSelectors.box);
 });
 
-console.log(red);
+function blue(background) {
+  background.style.backgroundColor = "blue";
+}
+
+DOMSelectors.button.addEventListener("click", function () {
+  blue(DOMSelectors.button);
+});
