@@ -15,9 +15,8 @@ DOMSelectors.button.addEventListener("click", function () {
   let address = DOMSelectors.address.value;
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
-    `<p>My name is 
-    ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
-    <button type="button" id="remove">Remove</button>
+    `<p id=idremove>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
+    <button onclick="removebutton()">Remove</button>
     </p>`
   );
   DOMSelectors.name.value = "";
@@ -26,18 +25,23 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.address.value = "";
 });
 
-function red(background) {
-  background.style.backgroundColor = "red";
+function green(background) {
+  background.style.backgroundColor = "green";
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  red(DOMSelectors.box);
+  green(DOMSelectors.box);
 });
 
-function blue(background) {
-  background.style.backgroundColor = "blue";
+function yellow(background) {
+  background.style.backgroundColor = "yellow";
 }
 
 DOMSelectors.button.addEventListener("click", function () {
-  blue(DOMSelectors.button);
+  yellow(DOMSelectors.button);
 });
+
+function removebutton() {
+  const element = document.getElementById("idremove");
+  element.remove();
+}
