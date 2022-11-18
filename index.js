@@ -16,7 +16,7 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
     `<p id=idremove>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
-    <button onclick="removebutton()">Remove</button>
+    <button type=button id="removebutton()" class="remove">Remove</button>
     </p>`
   );
   DOMSelectors.name.value = "";
@@ -41,7 +41,21 @@ DOMSelectors.button.addEventListener("click", function () {
   yellow(DOMSelectors.button);
 });
 
-function removebutton() {
-  const element = document.getElementById("idremove");
-  element.remove();
-}
+// function removebutton() {
+//   const element = document.getElementById("idremove");
+//   element.remove();
+// }
+
+// DOMSelectors.button.addEventListener("click", function () {
+//   const element = document.getElementById("idremove");
+//   idremove(idremove);
+// });
+
+//queryselectorall
+//array forEach()
+//add event listener
+//event.target what did I click?
+
+const matches = document.querySelectorAll("text");
+matches.forEach((matches) => {});
+console.log(matches);
