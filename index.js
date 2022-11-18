@@ -15,8 +15,8 @@ DOMSelectors.button.addEventListener("click", function () {
   let address = DOMSelectors.address.value;
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
-    `<p id=idremove>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
-    <button type=button id="removebutton()" class="remove">Remove</button>
+    `<p id=idremove><span>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
+    <button type=button id="removebutton" class="remove">Remove</button></span>
     </p>`
   );
   DOMSelectors.name.value = "";
@@ -56,6 +56,20 @@ DOMSelectors.button.addEventListener("click", function () {
 //add event listener
 //event.target what did I click?
 
-const matches = document.querySelectorAll("text");
-matches.forEach((matches) => {});
-console.log(matches);
+// const matches = document.querySelectorAll("remove");
+
+// console.log(matches);
+
+const removelist = document.createElement("idbutton");
+const removespan = document.createElement("span");
+const removebutton = document.createElement("removebutton");
+
+removebutton.textContent = "Remove";
+
+removebutton.addEventListener("click", () => {
+  list.removeChild(removelist);
+});
+
+console.log(removelist);
+console.log(removespan);
+console.log(removebutton);
