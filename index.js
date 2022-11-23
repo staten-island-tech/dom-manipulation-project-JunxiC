@@ -14,21 +14,21 @@ DOMSelectors.button.addEventListener("click", function () {
   let social = DOMSelectors.social.value;
   let address = DOMSelectors.address.value;
   DOMSelectors.box.insertAdjacentHTML(
-    "beforeend",
+    "afterend",
     `<p id="idremove"><span>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
     <button type=button id="removebutton" class="remove">Remove</button></span>
     </p>`
   );
 
+  DOMSelectors.name.value = "";
+  DOMSelectors.age.value = "";
+  DOMSelectors.social.value = "";
+  DOMSelectors.address.value = "";
+
   let buttonremove = document.getElementById("removebutton");
   buttonremove.addEventListener("click", function removeCard(event) {
     const element = document.getElementById("idremove");
     element.remove();
-
-    DOMSelectors.name.value = "";
-    DOMSelectors.age.value = "";
-    DOMSelectors.social.value = "";
-    DOMSelectors.address.value = "";
   });
 });
 
