@@ -16,7 +16,7 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.box.insertAdjacentHTML(
     "afterend",
     `<p id="idremove"><span>My name is ${name}. I am ${age} years old. My social security number is ${social}. I live at ${address}.
-    <button type=button id="removebutton" class="remove">Remove</button></span>
+    <button type="button" id="removebutton" class="remove">Remove</button></span>
     </p>`
   );
 
@@ -31,6 +31,12 @@ DOMSelectors.button.addEventListener("click", function () {
     element.remove();
   });
 });
+
+// const removebuttons = document.getElementsByClassName(".remove");
+// button.addEventListener("click", function (event) {
+//   const value = document.getElementById("idremove");
+//   event.target.remove(element);
+// });
 
 function green(background) {
   background.style.backgroundColor = "green";
